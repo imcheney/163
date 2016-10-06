@@ -12,7 +12,7 @@
 		type: 10,    //筛选类型(10: 产品设计; 20:编程语言)
 		asyn: true,
 		setUrl: function() {    //内部规定了一个方法叫setUrl,用来设置发送请求中的url长啥样;
-			dataRequest.url = 'http://study.163.com/webDev/couresByCategory.htm' + '?pageNo='
+			dataRequest.url = '//study.163.com/webDev/couresByCategory.htm' + '?pageNo='
 			 + dataRequest.pageNo + '&psize=' + dataRequest.psize + '&type=' + dataRequest.type;
 		}
 	}

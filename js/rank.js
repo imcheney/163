@@ -4,7 +4,7 @@
 	var dataRequest = {
 		requestType: "get",
 		asyn: true,
-		url: "http://study.163.com/webDev/hotcouresByCategory.htm"
+		url: "//study.163.com/webDev/hotcouresByCategory.htm"
 	}
 	dataRequest.success = function(dataRequest) {
 		var d = JSON.parse(dataRequest);   //d需要转换成数组才能在程序中使用;
