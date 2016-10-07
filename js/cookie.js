@@ -28,18 +28,19 @@ function getCookie(name) {
 	}   //value要decode操作才能用;
 	return value;
 }
+
 /*设置cookie, 等价于addCookie*/
 function setCookie(name, value, expires, path, domain, secure) {
 	var cookie = encodeURIComponent(name)+"="+encodeURIComponent(value);
 	if (expires) {cookie += "; expires="+expires.toUTCString();}
 	if (path) {cookie += "; path="+path;}
 	if (domain) {cookie += "; domain="+domain;}
-	// if (secure) {cookie += "; secure="+secure;}    //???此处可能存在坑;
+	if (secure) {cookie += "; secure="+secure;}    //???此处可能存在坑;
 	document.cookie = cookie;    //基本上等于加了一个新的cookie;
 	console.log(cookie);
 }
 
-/*删除cookie中某个key下的内容, 并且让*/
+/*删除cookie中某个key下的内容*/
 function removeCookie(name) {
-	document.cookie = name+"=; max-age=0";    //???存在不确定性;
+	document.cookie = name+"=; max-age=0";
 }
