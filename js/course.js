@@ -1,8 +1,8 @@
 (function () {
-	var courseTabs = document.getElementById("body-main tab");
-	var proDesign = courseTabs.children[0];
-	var proLang = courseTabs.children[1];
-	var course = document.getElementById("neCourse");
+	var courseTabs = document.getElementById("body-main tab");   //获取课程标签, 方便进一步获取其子标签;
+	var proDesign = courseTabs.children[0];    //proDesign 指向产品设计标签
+	var proLang = courseTabs.children[1];    //proLang 指向编程语言标签
+	var course = document.getElementById("neCourse");    //course 是整个课程展示区域;
 
 	/*设置发送请求的参数*/
 	var dataRequest = {  //参数都装在一个对象中; 值部分 number用数字, String要带引号;
@@ -93,6 +93,7 @@
 	});
 	var page = document.getElementById("body-main pagination");
 	var numList = page.querySelectorAll("li");
+	// console.log(numList);
 	/*封装一个goPage函数*/
 	function goPage(i){
 		return function() {
