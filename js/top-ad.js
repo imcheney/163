@@ -21,10 +21,10 @@
 	if (!getCookie("adHidden")) {    //js里面其实如果这里getCookie返回值是0的话, if这里判断也是true了;
 		console.log("Right now, cookie = "+getCookie("adHidden"));
 		topAd.style.display = "block";
-		setCookie("adHidden", 0, date);   
+		// setCookie("adHidden", 0, date);    这句话也似乎是多余的;
 	} else {
 		if (getCookie("adHidden")==1) {topAd.style.display = "none";}
-		if (getCookie("adHidden")==0) {topAd.style.display = "block";}  
+		// if (getCookie("adHidden")==0) {topAd.style.display = "block";}   这句话是多余的, 0=false;
 	}
 	
 })();
