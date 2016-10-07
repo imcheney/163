@@ -4,10 +4,12 @@ var loginModule = document.querySelector(".m-login");
 var followBtn = document.querySelector(".hd-title-btn");
 var followedModule = document.querySelector(".followed");
 console.log("login js runs!");
+/*给关闭按钮装上监听*/
 closeBtn.addEventListener("click", function(){
 	loginModule.style.display = "none";
-	document.body.style.overflowY = "auto";
+	document.body.style.overflowY = "auto";    //overflowY决定了垂直方向上是否展示滚动条, 是否允许滚动;
 });
+/*给"关注"按钮装上监听, 与关闭按钮正好操作是相反的*/
 followBtn.addEventListener("click", function(){
 	loginModule.style.display = "block";
 	document.body.style.overflowY = "hidden";
