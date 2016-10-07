@@ -34,6 +34,11 @@
 /*/给"关注"按钮装上监听函数*/
 
 /*step2: 登录框处理*/
+	/*登录表单验证所需要的变量准备*/
+		var userName = document.getElementById("userName");
+		var password = document.getElementById("password");
+		var submitBtn = document.getElementById("submitBtn");
+		var loginStatus = document.getElementById("loginStatus");
 
 	/*给登录框的关闭按钮装上监听*/
 		closeBtn.addEventListener("click", function(){
@@ -41,16 +46,10 @@
 			loginModule.style.display = "none";
 			document.body.style.overflowY = "auto";    //overflowY决定了垂直方向上是否展示滚动条, 是否允许滚动;
 			//清理掉loginStatus上的信息
-			loginStatus.innerHTML = "账号密码输入不正确!";
-			loginStatus.style.display = "block";
+			loginStatus.innerHTML = "";
+			loginStatus.style.display = "none";
 		});
 	/*/给登录框的关闭按钮装上监听*/
-
-	/*登录表单验证所需要的变量准备*/
-		var userName = document.getElementById("userName");
-		var password = document.getElementById("password");
-		var submitBtn = document.getElementById("submitBtn");
-		var loginStatus = document.getElementById("loginStatus");
 
 	/*login box最后"登录"按钮的点击事件*/
 		// (1) 判断是否已经输入账号密码
@@ -63,7 +62,7 @@
 			var dataRequest = {
 				requestType: "get",    //请求类型
 				asyn: true,
-				url: "//study.163.com/webDev/login.htm"+"?userName"+Md5(userName.value)+
+				url: "http://study.163.com/webDev/login.htm"+"?userName="+Md5(userName.value)+
 				"&password="+Md5(password.value)
 			}
 			/*设置一个处理服务器返回数据的callback函数*/
@@ -112,7 +111,7 @@
 		var dataRequest = {
 			requestType: "get",
 			asyn: true,
-			url: "//study.163.com/webDev/attention.htm"
+			url: "http://study.163.com/webDev/attention.htm"
 		};
 		dataRequest.success = function(respText) {
 			if (respText == 1) {
@@ -121,7 +120,7 @@
 				//设置关注的模块不显示
 				followBtn.style.display = "none";
 				//设置已关注的模块display: inline-block;
-				followed.style.display = "inline-block";
+				followedModule.style.display = "inline-block";
 				//设置粉丝人数+1
 				fansCount.innerHTML = "46";
 			}
@@ -136,7 +135,7 @@
 		console.log("click cancelFollowBtn!!");
 		removeCookie("followSuc");
 		followBtn.style.display = "inline-block";
-		followed.style.display = "none";
+		followedModule.style.display = "none";
 		fansCount.innerHTML = "45";
 	});
 /*/取消关注*/
