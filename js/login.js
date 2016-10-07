@@ -40,6 +40,9 @@
 			console.log("click closeBtn!!");
 			loginModule.style.display = "none";
 			document.body.style.overflowY = "auto";    //overflowY决定了垂直方向上是否展示滚动条, 是否允许滚动;
+			//清理掉loginStatus上的信息
+			loginStatus.innerHTML = "账号密码输入不正确!";
+			loginStatus.style.display = "block";
 		});
 	/*/给登录框的关闭按钮装上监听*/
 
