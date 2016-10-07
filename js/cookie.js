@@ -22,7 +22,7 @@ function getCookie(name) {
 	var startIndex = document.cookie.indexOf(encodedName);
 	var value = null;    //最后返回值是decoded的!
 	if (startIndex>-1) {
-		var endIndex = document.cookie.indexOf(";");
+		var endIndex = document.cookie.indexOf(";", startIndex);    //为了应对多cookie的场景, 得加上开始检索的index设置;
 		if (endIndex==-1) {endIndex = document.cookie.length;}
 		value = decodeURIComponent(document.cookie.substring(startIndex+encodedName.length, endIndex));
 	}   //value要decode操作才能用;
