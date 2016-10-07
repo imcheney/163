@@ -29,9 +29,26 @@
 		/*.followed i{display: inline-block; background: url("../img/icons/icons.png") no-repeat; background-position: -9px -75px; 
 		width: 13px; height: 10px; margin-right: 5px;}*/
 
-		.hd-title-name{float: left;}  .hd-title-btn{float: left;} .followed{float: left;} .hd-title-follow{float: left;}
+		.hd-container{height: 100px; line-height: 100px; margin: 0 auto; position: relative;}
+		.hd-container a:link, a:visited, a:hover, a:active{font-size: 16px; text-decoration: none;}
+		.hd-container i, .hd-container h2, .hd-container button{display: inline-block; vertical-align: middle;}
+		.hd-title h2{font-size: 22px; margin-left: 10px;}
+		.hd-title a:visited, a:hover, a:active{color: black;}
+		.hd-title-logo{width: 70px; height: 19px; background-image: url("../img/Sprite.png"); background-repeat: no-repeat;
+		 background-position: 0 0;}
+		.hd-title-btn{display: block; position: relative; color: rgb(255,255,255); background-color: rgb(33,165,87);
+			border: none; width: 54px; height: 21px; margin-left: 30px; margin-right: 15px; border-radius: 3px;}
+		.hd-title-btn i{display: inline-block; background: url("../img/icons/icons.png") no-repeat; background-position: -10px -60px; 
+		width: 8px; height: 8px; margin-right: 5px;}
 		/*针对已关注后的模块*/
-		
+		/*.followed{display: none;}*/
+		.followed{display: none; position: absolute; left: 267px; top: 50%;  transform: translateY(-50%); border-radius: 3px; 
+			background-color: rgb(240, 240, 240); text-align: center;
+			width: 108px; height: 19px; line-height: 19px;  border: solid 1px rgb(190, 190, 190);}
+		.followed i{display: inline-block; background: url("../img/icons/icons.png") no-repeat; background-position: -9px -75px; 
+		width: 13px; height: 10px; margin-right: 5px;}
+		.cancelFollow{color: rgb(160,160,160);}
+		.cancelFollow:hover{color: rgb(33, 165, 87); cursor: pointer; text-decoration: underline;}
 		/*/针对已关注后的模块*/
 
 		/*right link section rate: good*/

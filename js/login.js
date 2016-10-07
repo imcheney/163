@@ -8,12 +8,7 @@
 	var fansModule = document.querySelector(".hd-title-follow");
 	var fansCount = fansModule.children[1]; 
 	var cancelFollowBtn = document.querySelector(".cancelFollow");
-	/*登录表单验证所需要的变量准备*/
-		var userName = document.getElementById("userName");
-		var password = document.getElementById("password");
-		var submitBtn = document.getElementById("submitBtn");
-		var loginStatus = document.getElementById("loginStatus");
-		
+
 	console.log("login runs!");
 	/*expire 过期时间设置*/
     	//非常重要, expire不设置的话, cookie只存在于一个会话seesion之中, 等到刷新页面后, 就不会存在了; 因此会感觉cookie似乎没有设置成功;
@@ -39,6 +34,12 @@
 /*/给"关注"按钮装上监听函数*/
 
 /*step2: 登录框处理*/
+	/*登录表单验证所需要的变量准备*/
+		var userName = document.getElementById("userName");
+		var password = document.getElementById("password");
+		var submitBtn = document.getElementById("submitBtn");
+		var loginStatus = document.getElementById("loginStatus");
+
 	/*给登录框的关闭按钮装上监听*/
 		closeBtn.addEventListener("click", function(){
 			console.log("click closeBtn!!");
