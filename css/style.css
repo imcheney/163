@@ -100,7 +100,7 @@
 
 /*Module: show */
 		/*overall layout*/
-		.body-show .wrapper{width: 1610px; height: 220px; margin: 0 auto;}
+		.body-show .wrapper{width: 100%; height: 220px; margin: 0 auto;}
 		/*image setting*/
 		.body-show .wrapper{background-image: url("../img/img-show/workenv.jpg");}
 
