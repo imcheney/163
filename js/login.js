@@ -6,7 +6,7 @@
 	var followBtn = document.querySelector(".hd-title-btn");
 	var followedModule = document.querySelector(".followed");
 	var fansModule = document.querySelector(".hd-title-follow");
-	var fansCount = fansModule.courseTabs.children[1]; 
+	var fansCount = fansModule.children[1]; 
 	var cancelFollowBtn = document.querySelector(".cancelFollow");
 
 	console.log("login runs!");
@@ -68,8 +68,8 @@
 			dataRequest.success = function(respText) {
 				if (respText == 0) {
 					//账号密码错误, 显示警示信息, 表示账号密码输入不正确;
-					loginStatus.style.display = "block";
 					loginStatus.innerHTML = "账号密码输入不正确!";
+					loginStatus.style.display = "block";
 				} else {
 					//账号密码正确的情形, 设置loginSuc cookie, 关闭掉登录窗口, 然后调用follow函数;
 					// loginStatus.style.display = "none";   默认就是none的;
@@ -84,9 +84,9 @@
 			/*向服务器发送信息*/
 				//向服务器发送请求之前得判断用户是否已经输入
 				if (userName.value == "") {
-					loginStatus.style.display = "block";
 					loginStatus.innerHTML = "请输入账号!";
-					if (password.value == "") {loginStatus.innerHTML += "&nbsp;请输入密码!"}
+					if (password.value == "") {loginStatus.innerHTML += "&nbsp;请输入密码!";}
+					loginStatus.style.display = "block";
 				} else if (password.value == "") {
 					loginStatus.style.display = "block";
 					loginStatus.innerHTML = "请输入密码!";
