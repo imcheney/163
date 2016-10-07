@@ -9,7 +9,6 @@
 	var fansCount = fansModule.children[1]; 
 	var cancelFollowBtn = document.querySelector(".cancelFollow");
 
-	console.log("login runs!");
 	/*expire 过期时间设置*/
     	//非常重要, expire不设置的话, cookie只存在于一个会话seesion之中, 等到刷新页面后, 就不会存在了; 因此会感觉cookie似乎没有设置成功;
 		//获取当前时间 

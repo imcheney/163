@@ -7,11 +7,11 @@
 		//获取当前时间 
 		var date=new Date(); 
 		var expiresDays= 7; 
-		//将date设置为10天以后的时间 
+		//将date设置为7天以后的时间 
 		date.setTime(date.getTime()+expiresDays*24*3600*1000); 
 
 	closeBtn.addEventListener("click",function() {
-		console.log("addEventListener to closeBtn!");
+		console.log("click top-ad closeBtn!");
 		setCookie("adHidden", 1, date);    //1:true and hide ad; 0:false and keep showing ad;
 		topAd.style.display = "none";
 		console.log(getCookie("adHidden"));

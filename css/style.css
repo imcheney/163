@@ -210,7 +210,7 @@
 		.footer .more{display: table-cell; width: 66px;}
 
 /*Module: top-ad*/
-		.top-ad {line-height: 30px; background-color: #eee; display: absolute; top: 0;}
+		.top-ad {line-height: 30px; background-color: #eee; position: absolute; top: 0;}
 		.top-ad.wrapper div, .top-ad.wrapper a, .top-ad.wrapper p, .top-ad.wrapper i{display: inline-block;}
 
 		.top-ad a, .top-ad a:hover{font-size: 12px;}
