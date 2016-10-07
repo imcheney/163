@@ -62,7 +62,6 @@
 			var dataRequest = {
 				requestType: "get",    //请求类型
 				asyn: true,
-				url: "http://study.163.com/webDev/login.htm"+"?userName="+Md5(userName.value)+
 				"&password="+Md5(password.value)
 			}
 			/*设置一个处理服务器返回数据的callback函数*/
@@ -111,7 +110,6 @@
 		var dataRequest = {
 			requestType: "get",
 			asyn: true,
-			url: "http://study.163.com/webDev/attention.htm"
 		};
 		dataRequest.success = function(respText) {
 			if (respText == 1) {
