@@ -102,12 +102,7 @@
 		/*overall layout*/
 		.body-show .wrapper{width: 1610px; height: 220px; margin: 0 auto;}
 		/*image setting*/
-		.body-show .wrapper i{display: inline-block; width: 19.8%; height: 220px;}
-		.i-1 {background-image: url("../img/img-show/i-1.jpg");}
-		.i-2 {background-image: url("../img/img-show/i-2.jpg");}
-		.i-3 {background-image: url("../img/img-show/i-3.jpg");}
-		.i-4 {background-image: url("../img/img-show/i-4.jpg");}
-		.i-5 {background-image: url("../img/img-show/i-5.jpg");}
+		.body-show .wrapper{background-image: url("../img/img-show/workenv.jpg");}
 
 /*Module: body-main*/
 		.body-main.course.container{width: 975px; float: left; position: relative;}
