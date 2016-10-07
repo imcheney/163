@@ -123,6 +123,7 @@
 				followedModule.style.display = "inline-block";
 				//设置粉丝人数+1
 				fansCount.innerHTML = "46";
+				fansModule.style.margin = "0 0 0 150px";
 			}
 		}
 		ajax(dataRequest);    //调用关注API;
@@ -137,6 +138,7 @@
 		followBtn.style.display = "inline-block";
 		followedModule.style.display = "none";
 		fansCount.innerHTML = "45";
+		fansModule.style.margin = "0";
 	});
 /*/取消关注*/
 
